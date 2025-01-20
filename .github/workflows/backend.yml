@@ -107,7 +107,7 @@ jobs:
         # 6. 서버구동
         #    엑세스, 에러로그등 전체 로그를 output.log으로 출력
         #    nohup java -jar run.jar > ./output.log 2>&1 &
-        # 7. 뒷정리
+        # 7. 파일 정리
         #    rm -rf /home/ubuntu/server/demo
         with:
           host: ${{ secrets.EC2_HOST }}

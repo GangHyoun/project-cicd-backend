@@ -64,12 +64,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // 여러개의 IP, 도메인 등 등록 -> 허가된 IP/도메인 n개일 때 처리
         String release_ip = env.getProperty("app.release_ip");
-        String release_domain = env.getProperty("app.release_domain");
+        String release_ip_domain = env.getProperty("app.release_ip_domain");
         String dev_ip = env.getProperty("app.dev_ip");
         // 일괄 등록
         config.setAllowedOrigins(Arrays.asList(
                 release_ip,     // 리액트 상용 서버 ip 주소
-                release_domain, // 리액트 상용 서버 도메인
+                release_ip_domain, // 리액트 상용 서버 도메인
                 dev_ip          // 리액트 개발 서버 ip 주소
         ));
 
